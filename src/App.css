@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Saira+Semi+Condensed&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color:   #7986cb
+  ;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+.App {
+  padding-top:2%;
+  padding-left:3% ;
+  padding-right: 3%;
+}
+
+.App h1 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: .5rem;
+}
+
+.main-container{
+  min-height: 200px;
+  color: black;
+  padding: 3%;
+  border-radius: 10px;
+}
+
+/* for smaller screen .utility {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  
+} */
+
+.utility {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  
+}
+
+.search-bar {
+  position: relative;
+}
+.search-icon {
+  position: absolute;
+  right: 13px;
+  top: 5px;
+}
+
+.search-bar input[type="text"]
+{
+  border-radius: 40px;
+  padding: .4rem;
+  border: none;
+  border-right:40px solid 
+  #63ca86;
+  padding-left: 12px;
+
+  position: relative;
+}
+
+.search-bar input:focus, textarea:focus, select:focus{
+  outline: none;
+}
+
+
+.create{
+  padding: .4rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 40px;
+  border: solid 2px white ;
+  color: white;
+  font-size: 12px;
+  transition: transform .2s;
+  margin-top: .5rem;
+  /* for smaller screen remove the margin-top */
+}
+
+.create > i {
+  vertical-align: middle;
+  color: white;
+}
+
+.create:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+
+.contact{
+  
+  max-height: fit-content;
+  max-width: 500px;
+  margin:auto;
+  margin-top: 1rem;;
+  
+}
+.contact-heading {
+  background-color: thistle;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: .7rem;
+  border-left: solid 5px #05396b;
+}
+.contact-heading p {
+  margin: 0;
+}
+
+
+.contact-content {
+  background-color: 
+  #edf5e0;
+  margin: auto;
+  padding-left: .5rem;
+  padding-right: .5rem;
+  padding-top: .5rem;
+  font-size: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "edit delete"
+    "contact contact";
+  grid-gap: 10px;
+  
+}
+.edit-btn {
+  grid-area:edit;
+  background-color: green;
+}
+.delete-btn{
+  grid-area: delete;
+  background-color: rgb(216, 25, 25);
+}
+.edit-btn, .delete-btn {
+  margin: auto;
+  width: 75%;
+  padding: 3px;
+  color: white;
+  text-align: center;
+  border-radius: 20px;
+}
+.contact-details {
+  grid-area: contact;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  /* grid-template-columns: 1fr 1fr;
+  grid-template-areas: "number email"; */
+  padding: .5rem
+
+}
+.contact-details > div:first-of-type {
+  /* flex: 1 1; */
+  text-align: center;
+}
+
+.edit-btn:hover {
+  
+  border: solix 1px green;
+  box-shadow: 0 0 10px green ;
+}
+
+.delete-btn:hover{
+  
+  border: solix 1px rgb(216, 25, 25);
+  box-shadow: 0 0 10px  rgb(216, 25, 25);
+}
+
+.delete-btn:active {
+  background-color: rgb(238, 113, 113);
+}
+
+.edit-btn:active{
+  background-color: #5cdb94;
+}
+
+
+
+
+.add-contact-modal {
+  background-color: rgb(253, 211, 218);
+  color: black;
+  margin: 10% 10%;
+  min-height: 75%;
+  transition: transform .2s;
+  padding-top: 1%;
+  padding-left: 5%;
+  padding-right: 5%;
+  -webkit-box-shadow: 9px 10px 7px -9px rgba(87,81,87,1);
+  -moz-box-shadow: 9px 10px 7px -9px rgba(87,81,87,1);
+  box-shadow: 9px 10px 7px -9px rgba(87,81,87,1);
+  font-family: 'Open Sans', sans-serif;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+
+.add-contact-modal:focus {
+  outline: none !important;
+}
+
+.add-contact-modal > h2 
+{
+  text-align: center;
+  color: #00274b
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+ 
+}
+.contact-form > div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: .5rem;
+}
+
+.contact-form label {
+  margin: 5px;
+}
+.contact-form i {
+  vertical-align: middle;
+  height: 2px;
+}
+
+.contact-form .input {
+  outline: none !important;
+  border: none;
+  margin-left:1.5rem;
+  padding: .5rem;
+  border-radius: 10px;
+  margin-top: .3rem;
+  width: 70%;
+}
+
+.contact-form .input.name {
+  width: 90%
+}
+
+.contact-form .input:focus {
+  border: solix 1px palevioletred;
+  box-shadow: 0 0 10px palevioletred ;
+}
+
+.submit-btn {
+  border:none;
+  background-color: #7986cb;
+  color:white;
+  border-radius: 15px;
+   width: 50%;
+   margin: auto;
+   margin-top: 1.5rem;
+   padding: .5rem;
+   font-weight: 700;
+  box-shadow: 3px 5px 0px #a3b0f1;
+
+}
+.addFieldBtns {
+  display: inline;
+  vertical-align: middle;
+  
+
+}
+
+.addFieldBtns > span{
+  margin-left: 1rem;
+}
+
+.submit-btn:focus
+{
+  outline: none;
+}
+
+.submit-btn:hover {
+  transform: scale(1.1);
+}
+
+.error {
+  color: red;
+  margin-left: 2rem;
+  padding-top: 5px;
+  font-size: 13px;
+}
+
+
+@media (min-width: 720px){
+  .utility{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .App {
+    margin: auto 10%;
+  }
+
+  .contact-content {
+    font-size: 13px;
+  }
+  .add-contact-modal {
+    margin: 10% 15%;
+  }
+ 
+  
+}
+
+@media (min-width: 900px)
+{
+  .create {
+    margin-top: 0;
+  }
+  .App{
+    margin:auto 25%;
+  }
+  .App h1 {
+    font-size: 4rem;
+    
+  }
+  .add-contact-modal {
+    margin: 10% 25%;
+  }
+}
+
